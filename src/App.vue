@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h2 class="message">{{ message }}</h2>
+  <router-view></router-view>
   </div>
 </template>
 
@@ -8,16 +8,12 @@
 export default {
   data() {
     return {
-      message: "Hello world!"
+
     };
   }
 };
 </script>
 
 <style>
-.message {
-  font-size: 18px;
-  font-family: "Roboto", sans-serif;
-  color: blue;
-}
+
 </style>

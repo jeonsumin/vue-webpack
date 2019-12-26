@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const miniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -25,9 +26,10 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            template: './src/public/index.html'
         }),
         new VueLoaderPlugin(),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new miniCssExtractPlugin()
     ]
 };
