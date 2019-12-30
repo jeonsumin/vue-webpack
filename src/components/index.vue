@@ -1,13 +1,17 @@
 <template>
-<div class="">
-	<p id="hello">router-view</p>
-</div>
+  <div>
+    <p>hello world</p>
+  </div>
 </template>
 
 <script>
 export default {
-}
+  data() {
+    return {};
+  },
+  methods: {}
+};
 </script>
 
-<style lang="css" scoped>
+<style>
 </style>

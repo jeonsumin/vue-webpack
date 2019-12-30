@@ -1,16 +1,16 @@
 <template>
-  <div id="app">
-  <router-view></router-view>
-  </div>
+<div id="wrapper">
+	<router-view></router-view>
+</div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
+	data() {
+		return {
 
-    };
-  }
+		};
+	}
 };
 </script>
 
