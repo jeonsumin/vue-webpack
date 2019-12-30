@@ -4,6 +4,7 @@
 $ npm install
 ```
 
+#### dev serve 실행시 
 ```bash
 $ npm run serve
 ```
