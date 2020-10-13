@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.20.0",
     "bootstrap": "^4.4.1",
     "csv-loader": "^3.0.2",
     "file-loader": "^5.0.2",
