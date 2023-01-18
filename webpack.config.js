@@ -3,9 +3,14 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 const path = require('path');
+const dotenv = require('dotenv-webpack');
 
 module.exports = {
     entry: './src/main.js',
+    output: {
+        filename: "main.js",
+        path:path.resolve(__dirname, "./dist")
+    },
     module: {
         rules: [{
                 test: /\.js$/,
@@ -38,17 +43,23 @@ module.exports = {
     },
     resolve: {
         modules: [path.resolve(__dirname, "src"), "node_modules"],
-        extensions: ["*", ".js", ".vue", ".json"]
+        extensions: ["*", ".js", ".vue", ".json"],
+        alias: {
+            '@': path.join(__dirname, "src/")
+        }
     },
     devServer: {
+        port:3000,
         open: true,
         hot: true
     },
+
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/public/index.html'
         }),
         new VueLoaderPlugin(),
+        new dotenv(),
         new webpack.HotModuleReplacementPlugin(),
         new miniCssExtractPlugin()
     ]

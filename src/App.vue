@@ -10,7 +10,11 @@ export default {
 		return {
 
 		};
-	}
+	},
+  mounted() {
+    this.$axios.get("/api/member")
+    console.log("env", process.env.base_url)
+  }
 };
 </script>
 
